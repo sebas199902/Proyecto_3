@@ -1,0 +1,178 @@
+:root {
+  --fuente-principal: "Lato", sans-serif;
+  --color-footer: #eee;
+  --color-nav: #000000;
+  --boton: rgb(0, 179, 65);
+  --hover-boton: rgb(1, 163, 60);
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+h1,
+h2,
+p,
+li {
+  line-height: 1.2;
+}
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+p,
+li,
+a{
+  font-size: 20px;
+}
+.contenedor {
+  font-family: var(--fuente-principal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.btn {
+  cursor: pointer;
+}
+/**Header**/
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-footer);
+  font-family: var(--fuente-principal);
+  width: 100%;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+#header-img {
+  width: 180px;
+  height: 80px;
+}
+.nav-link,
+.nav-footer {
+  text-decoration: none;
+  color: var(--color-nav);
+  margin-right: 10px;
+}
+@media (max-width: 480px) {
+  .nav-link {
+    display: block;
+    margin: 10px 0;
+  }
+}
+/**Seccion superior**/
+.titulo {
+  text-align: center;
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#email {
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+  font-size: 20px;
+}
+#submit {
+  margin-top: 20px;
+  width: 200px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: var(--boton);
+  border: none;
+  border-radius: 5px;
+}
+#submit:hover{
+    background-color: var(--hover-boton);
+}
+/**Caracteristicas**/
+#caracteristicas {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  margin-top: 20px;
+}
+.icon {
+  justify-self: center;
+}
+/**Video**/
+#video {
+  margin-top: 20px;
+}
+.video-format {
+  max-width: 100%;
+}
+/**Precios**/
+#precios {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  margin: 20px 0;
+}
+@media (max-width: 480px) {
+  #precios {
+    grid-template-columns: 1fr;
+  }
+  .grid-precios {
+    margin-bottom: 10px;
+  }
+}
+.grid-precios {
+  border: 1px solid #000000;
+}
+.titulos-precios {
+  background-color: var(--color-footer);
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 20px;
+  text-align: center;
+}
+.precio-alm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+.boton {
+  width: 90%;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: var(--boton);
+  border: none;
+  border-radius: 5px;
+}
+.boton:hover{
+    background-color: var(--hover-boton);
+}
+/**Footer**/
+footer {
+  text-align: end;
+  background-color: var(--color-footer);
+  font-family: var(--fuente-principal);
+  padding: 10px;
+}
+.footer{
+  margin-top: 10px;
+}
